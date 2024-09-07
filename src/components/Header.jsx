@@ -1,12 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-    const link = <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
-    </ul>
-
 
     return (
         <div>
@@ -30,16 +24,20 @@ const Header = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-         <li>{link}</li>
-       
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
+            <li><NavLink to="/map">Map</NavLink></li>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">logo</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-    <li>{link}</li>
-     
+    <li className="mx-4"><NavLink to="/">Home</NavLink></li>
+            <li  className="mx-4"><NavLink to="/about">About</NavLink></li>
+            <li  className="mx-4"><NavLink to="/contact">Contact</NavLink></li>
+            <li><NavLink to="/map">Map</NavLink></li>
     </ul>
   </div>
   <div className="navbar-end">
